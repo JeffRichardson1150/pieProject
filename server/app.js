@@ -19,8 +19,9 @@ app.use(require('./middleware/headers'));
 
 // routes
 // app.get('/pies', (req, res) => res.send('I love pie'));
-app.use('/pies', pies); // when get to the endpoint '/pies', activate the pies controller
 app.use('/auth', user);
+app.use(require('./middleware/validate-session'))
+app.use('/pies', pies); // when get to the endpoint '/pies', activate the pies controller
 
 
 // app.listen(3000, () => console.log('Pie app is listening on 3000'));

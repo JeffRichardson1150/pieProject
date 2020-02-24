@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Pie = require('../db').import('../models/pie'); // if can access db, then import the model
+// const validateSession = require('../middleware/validate-session')
 
 //const router = require('express').Router(); // single line for both the above
 
